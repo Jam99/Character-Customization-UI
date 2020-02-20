@@ -1,0 +1,451 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="tabs-container">
+			<nav class="tabs-nav">
+				<a data-target="#tab_body" onclick="openTab(this)">Body</a>
+				<a data-target="#tab_head" onclick="openTab(this)">Head</a>
+				<a data-target="#tab_eyes" onclick="openTab(this)">Eyes</a>
+				<a data-target="#tab_face" onclick="openTab(this)">Face</a>
+				<a data-target="#tab_pose" onclick="openTab(this)">Pose</a>
+				<a data-target="#tab_extra" onclick="openTab(this)">Extra</a>
+			</nav>
+			<div id="tab_body" class="tab">
+				<div class="content-container">
+					<h3>Skin</h3>
+					<div class="content-color-palette">
+						<div data-rgb="50;40;40" class="color-item selected"></div>
+						<div data-rgb="75;57;50" class="color-item"></div>
+						<div data-rgb="89;59;43" class="color-item"></div>
+						<div data-rgb="233;183;138" class="color-item"></div>
+						<div data-rgb="197;132;92" class="color-item"></div>
+					</div>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Yellow/Blue</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Light/Dark</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Gloss</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Power</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Contrast</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Muscular</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Proportions</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Arms - thickness</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Chest</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Waist</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Hips - width</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Thighs - length</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Thighs - thickness</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Calves - length</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Calves - thickness</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Feet</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Body</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Fat - head</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Fat - body</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Clothes</h3>
+					<div class="content-image-picker">
+						<img src="images/1.png" draggable="false" class="img-btn selected">
+						<img src="images/2.png" draggable="false" class="img-btn">
+						<img src="images/3.png" draggable="false" class="img-btn">
+						<img src="images/4.png" draggable="false" class="img-btn">
+					</div>
+				</div>
+			</div>
+			<div id="tab_head" class="tab">
+				<div class="content-container">
+					<h3>Head</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">braws</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">braws 2</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">chin</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">skinny</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Hair</h3>
+					<div class="content-next-prev">
+						<div class="next-prev-btn btn-prev"></div>
+						<div class="next-prev-item-container">
+							<span class="next-prev-item show">Bald</span>
+							<span class="next-prev-item">Short</span>
+							<span class="next-prev-item">Long</span>
+							<span class="next-prev-item">Afro</span>
+						</div>
+						<div class="next-prev-btn btn-next"></div>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Beard</h3>
+					<div class="content-next-prev">
+						<div class="next-prev-btn btn-prev"></div>
+						<div class="next-prev-item-container">
+							<span class="next-prev-item show">None</span>
+							<span class="next-prev-item">Balboo</span>
+							<span class="next-prev-item">Goatee</span>
+							<span class="next-prev-item">Full beard</span>
+						</div>
+						<div class="next-prev-btn btn-next"></div>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Stubble</h3>
+					<div class="content-toggle">
+						<button style="display:block" class="toggle-btn btn-on">On</button>
+						<button class="toggle-btn btn-off">Off</button>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Hair color</h3>
+					<div class="content-color-palette">
+						<div data-rgb="35;18;11" class="color-item selected"></div>
+						<div data-rgb="61;35;20" class="color-item"></div>
+						<div data-rgb="90;56;37" class="color-item"></div>
+						<div data-rgb="204;153;102" class="color-item"></div>
+						<div data-rgb="44;22;8" class="color-item"></div>
+						<div data-rgb="250;240;190" class="color-item"></div>
+						<div data-rgb="245;194;151" class="color-item"></div>
+						<div data-rgb="198;110;46" class="color-item"></div>
+						<div data-rgb="242;207;175" class="color-item"></div>
+						<div data-rgb="117;37;10" class="color-item"></div>
+						<div data-rgb="67;12;10" class="color-item"></div>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Eyelashes</h3>
+					<div class="content-color-palette">
+						<div data-rgb="99;78;52" class="color-item selected"></div>
+						<div data-rgb="46;83;111" class="color-item"></div>
+						<div data-rgb="61;103;29" class="color-item"></div>
+						<div data-rgb="28;120;71" class="color-item"></div>
+						<div data-rgb="73;118;101" class="color-item"></div>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Brows</h3>
+					<div class="content-color-palette">
+						<div data-rgb="35;18;11" class="color-item selected"></div>
+						<div data-rgb="61;35;20" class="color-item"></div>
+						<div data-rgb="90;56;37" class="color-item"></div>
+						<div data-rgb="67;12;10" class="color-item"></div>
+					</div>
+				</div>
+			</div>
+			<div id="tab_eyes" class="tab">
+				<div class="content-container">
+					<h3>Eyes outer color</h3>
+					<div class="content-color-palette">
+						<div data-rgb="238;232;230" class="color-item selected"></div>
+						<div data-rgb="250;251;249" class="color-item"></div>
+						<div data-rgb="255;160;122" class="color-item"></div>
+						<div data-rgb="233;150;122" class="color-item"></div>
+						<div data-rgb="176;224;230" class="color-item"></div>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Eyes inner color</h3>
+					<div class="content-color-palette">
+						<div data-rgb="238;232;230" class="color-item selected"></div>
+						<div data-rgb="250;251;249" class="color-item"></div>
+						<div data-rgb="255;160;122" class="color-item"></div>
+						<div data-rgb="233;150;122" class="color-item"></div>
+						<div data-rgb="176;224;230" class="color-item"></div>
+					</div>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Iris size</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Pupil size</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Iris brightness</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Limbus</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Eyes</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Eyes - retraction</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 1</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 2</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 3</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 4</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 5</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyes 6</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Advanced</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Look up/down</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Eyeball size</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="tab_face" class="tab">
+				<div class="content-container">
+					<h3>NOSE</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Nose 1</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 2</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 3</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 4</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 5</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 6</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Nose 7</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+								<div class="content-container">
+					<h3>NOSE</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Lips 1</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Lips 2</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Lips 3</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="slider-label">Mouth - width</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="tab_pose" class="tab">
+				<div class="content-container">
+					<h3>Expressions</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Smile</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Smirk</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Smirk 2</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Anger</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Mouth</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Pose</h3>
+					<div class="content-slider-list">
+						<ul>
+							<li>
+								<span class="slider-label">Nod head</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Bow head</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+							<li>
+								<span class="slider-label">Turn head</span>
+								<input class="slider" type="range" min="1" max="100" value="50">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-container">
+					<h3>Background</h3>
+					<div class="content-color-palette">
+						<div data-rgb="30;30;30" class="color-item selected"></div>
+						<div data-rgb="120;120;120" class="color-item"></div>
+						<div data-rgb="190;190;190" class="color-item"></div>
+						<div data-rgb="233;233;233" class="color-item"></div>
+					</div>
+				</div>
+			</div>
+			<div id="tab_extra" class="tab">
+				<div class="content-container">
+					Not available
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
